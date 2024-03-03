@@ -6,7 +6,7 @@
  * @package Mazzeo
  */
 
-include_once 'header.php';
+get_header()
 ?>
 
 
@@ -14,4 +14,4 @@ include_once 'header.php';
     This is a content.
 </div>
 
-<?php include_once 'footer.php' ?>
+<?php get_footer();
