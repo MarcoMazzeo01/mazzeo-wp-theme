@@ -9,12 +9,15 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php get_language_attributes() ?>">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo('charset') ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MZZ Ingegneria</title>
+
+    <?php wp_head() ?>
+    <!-- wp_head() invokes style.css and other scripts thru wordpress' api; mandatory -->
+
 </head>
 
 <body>
