@@ -70,7 +70,9 @@ function autoloader($resource = '')
                 break;
         }
 
-        $resource_path = sprintf('%s/inc/%s/%s.php', untrailingslashit('C:\MAMP\htdocs\wordpress-6.4.3\wordpress\wp-content\themes\mazzeo'), $directory, $file_name);
+        //MAZZEO_DIR_PATH refers to the theme folder path;
+        //it's a constant defined in the functions.php file
+        $resource_path = sprintf('%s/inc/%s/%s.php', untrailingslashit(MAZZEO_DIR_PATH), $directory, $file_name);
     }
 
     /**
