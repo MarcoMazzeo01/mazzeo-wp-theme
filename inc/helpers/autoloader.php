@@ -6,7 +6,7 @@
  * @package Mazzeo
  */
 
-namespace mazzeo\Inc\Helpers;
+namespace MAZZEO_THEME\Inc\Helpers;
 
 /**
  * Auto loader function.
@@ -18,7 +18,7 @@ namespace mazzeo\Inc\Helpers;
 function autoloader($resource = '')
 {
     $resource_path  = false;
-    $namespace_root = 'mazzeo\\';
+    $namespace_root = 'MAZZEO_THEME\\';
     $resource       = trim($resource, '\\');
 
     if (empty($resource) || strpos($resource, '\\') === false || strpos($resource, $namespace_root) !== 0) {
@@ -86,4 +86,4 @@ function autoloader($resource = '')
     }
 }
 
-spl_autoload_register('\mazzeo\Inc\Helpers\autoloader');
+spl_autoload_register('\MAZZEO_THEME\Inc\Helpers\autoloader');
