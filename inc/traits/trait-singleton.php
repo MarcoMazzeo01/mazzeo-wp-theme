@@ -1,6 +1,6 @@
 <?php
 
-namespace mazzeo\Inc\Traits;
+namespace MAZZEO_THEME\Inc\Traits;
 
 trait Singleton
 {
