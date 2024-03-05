@@ -6,6 +6,13 @@
  * @package Mazzeo
  */
 
+if (!defined('MAZZEO_DIR_PATH')) {
+    define('MAZZEO_DIR_PATH', untrailingslashit(get_template_directory()));
+}
+
+require_once MAZZEO_DIR_PATH . '/inc/helpers/autoloader.php';
+
+
 function mazzeo_enqueue_scripts()
 {
     //register style.css
