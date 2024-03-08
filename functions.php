@@ -11,6 +11,10 @@ if (!defined('MAZZEO_DIR_PATH')) {
     define('MAZZEO_DIR_PATH', untrailingslashit(get_template_directory()));
 }
 
+if (!defined('MAZZEO_DIR_URI')) {
+    define('MAZZEO_DIR_URI', untrailingslashit(get_template_directory_uri()));
+}
+
 require_once MAZZEO_DIR_PATH . '/inc/helpers/autoloader.php';
 
 function mazzeo_get_theme_instance()
