@@ -19,6 +19,7 @@ class MAZZEO_THEME
     {
         //load class
         Assets::get_instance(); //enqueues style and scripts;
+        Menus::get_instance();
         $this->setup_hooks();
     }
 
