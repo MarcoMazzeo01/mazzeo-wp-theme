@@ -34,4 +34,15 @@ class Menus
             'mazzeo-footer-menu' => esc_html__('Footer Menu', 'mazzeo')
         ]);
     }
+
+    public function get_menu_id($location)
+    {
+        //get all the locations
+        $locations = get_nav_menu_locations();
+
+        //get object id by location
+        $menu_id = $locations[$location];
+
+        return !empty($menu_id) ? $menu_id : '';
+    }
 }
