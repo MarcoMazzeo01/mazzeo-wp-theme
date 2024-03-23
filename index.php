@@ -15,10 +15,11 @@ get_header()
 
     <div class="container">
         <?php
-        echo 'Directory: </br>';
-        echo get_template_directory() . '</br>';
-        echo 'URI: </br>';
-        echo get_template_directory_uri();
+        // echo 'Directory: </br>';
+        // echo get_template_directory() . '</br>';
+        // echo 'URI: </br>';
+        // echo get_template_directory_uri();
+        esc_html_e('Content Index', 'mazzeo');
         ?>
     </div>
 </div>
