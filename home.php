@@ -16,15 +16,15 @@ get_header()
         <?php
         if (have_posts()) {
         ?>
-            <div class="container">
-                <?php
+        <div class="container">
+            <?php
                 while (have_posts()) : the_post();
                     the_title();
-                    the_excerpt();
+                    the_content();
 
                 endwhile;
                 ?>
-            </div>
+        </div>
 
         <?php
 
