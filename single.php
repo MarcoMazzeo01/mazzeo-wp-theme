@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Main template file.
+ * Single post template file.
  * 
  * @package Mazzeo
  */
