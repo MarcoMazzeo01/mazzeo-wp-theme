@@ -5,3 +5,8 @@ Version: 1.0
 Description: Bla bla bla
 Text Domain: mazzeo
 */
+
+img {
+    width: 100%;
+    height: auto;
+}
