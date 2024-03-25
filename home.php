@@ -2,66 +2,53 @@
 
 /**
  * Blog list template file.
- * 
+ *
  * @package Mazzeo
  */
 
-get_header()
-?>
+get_header(); ?>
 
 
 <div id="primary">
     <main id="main" class="site-main mt-5" role="main">
 
-        <?php
-        if (have_posts()) :
-        ?>
-        <div class="container">
-            <?php
-                if (is_home() && !is_front_page()) {
-                ?>
-            <header class='mb-5'>
-                <h1 class="page-title">
-                    <?php single_post_title() ?>
-                </h1>
-            </header>
-            <?php
-                }
-                ?>
+        <?php if (have_posts()) : ?>
+            <div class="container">
+                <?php if (is_home() && !is_front_page()) { ?>
+                    <header class='mb-5'>
+                        <h1 class="page-title">
+                            <?php single_post_title(); ?>
+                        </h1>
+                    </header>
+                <?php } ?>
 
-            <div class="row">
-                <?php
+                <div class="row">
+                    <?php
                     $index = 0;
                     $no_of_columns = 3;
 
                     //Start the loop
-                    while (have_posts()) : the_post();
-                        if (0 === $index %  $no_of_columns) {
-                    ?>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <?php
-                        }
+                    while (have_posts()) :
+                        the_post();
+                        if (0 === $index % $no_of_columns) { ?>
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                            <?php }
 
-                        get_template_part('template-parts/content');  //shows blog post block structure 
+                        get_template_part("template-parts/content"); //shows blog post block structure
 
                         $index++;
 
-                        if ($index !== 0 && 0 === $index % $no_of_columns) {
-                            ?>
-                </div>
-                <?php
-                        }
+                        if ($index !== 0 && 0 === $index % $no_of_columns) { ?>
+                            </div>
+                    <?php }
                     endwhile;
                     ?>
 
+                </div>
             </div>
-        </div>
 
-        <?php
-        else :
-            get_template_part('template-parts/content-none');
-        endif;
-        ?>
+        <?php else : get_template_part("template-parts/content-none");
+        endif; ?>
     </main>
 </div>
 
