@@ -16,6 +16,7 @@ if (!defined('MAZZEO_DIR_URI')) {
 }
 
 require_once MAZZEO_DIR_PATH . '/inc/helpers/autoloader.php';
+require_once MAZZEO_DIR_PATH . '/inc/helpers/template-tags.php';
 
 function mazzeo_get_theme_instance()
 {
