@@ -38,7 +38,18 @@
                 )
                 ?>
             <?php
-        }
+        } elseif (is_search()) {
             ?>
+            <p><?php esc_html_e('Nessun post trovato dalla tua ricerca! :(') ?></p>
+        <?php
+            get_search_form();
+        } else {
+        ?>
+            <p><?php esc_html_e('Nessun post trovato dalla tua ricerca! Vuoi riprovare?') ?></p>
+
+        <?php
+            get_search_form();
+        }
+        ?>
     </div>
 </section>
